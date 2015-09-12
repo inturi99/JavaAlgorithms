@@ -18,13 +18,36 @@ public class SortingAlgorithms {
 		}
 		return a;
 	}
-	
-public static void main(String[] args) {
-	int[] ar1={10,20,90,30,40};
-	int[] ar2=selectionSort(ar1);
-	for(int i:ar2){
-		System.out.print(i +",");
-		
+
+	public static int[] insertionSort(int[] a) {
+		int i, j, temp;
+		int size = a.length;
+		for (i = 1; i < size; i++) {
+			for (j = i; j > 0; j--) {
+				if (a[j] < a[j - 1]) {
+					temp = a[j];
+					a[j] = a[j - 1];
+					a[j - 1] = temp;
+				}
+			}
+		}
+
+		return a;
 	}
-}
+
+	public static void main(String[] args) {
+		int[] ar = { 10, 20, 90, 30, 40 };
+		int[] ss = selectionSort(ar);
+		System.out.println("Selection Sort");
+		for (int i : ss) {
+			System.out.print(i + ",");
+
+		}
+		System.out.println("\n");
+		int[] is = insertionSort(ar);
+		System.out.println("Insertion Sort");
+		for (int i : is) {
+			System.out.print(i + ",");
+		}
+	}
 }
