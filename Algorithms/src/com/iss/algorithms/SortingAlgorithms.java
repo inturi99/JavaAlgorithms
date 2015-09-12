@@ -1,6 +1,6 @@
 package com.iss.algorithms;
 
-public class SelectionSort {
+public class SortingAlgorithms {
 	public static int[] selectionSort(int[] a) {
 		int i, j, minIndex, temp;
 		int size = a.length;
@@ -18,6 +18,7 @@ public class SelectionSort {
 		}
 		return a;
 	}
+	
 public static void main(String[] args) {
 	int[] ar1={10,20,90,30,40};
 	int[] ar2=selectionSort(ar1);
