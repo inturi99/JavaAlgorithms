@@ -5,7 +5,7 @@ public class SortingAlgorithms {
 		int i, j, temp;
 		int size = a.length;
 		for (i = 0; i < size; i++) {
-			for (j = 1; j < size - 1; j++) {
+			for (j = 1; j < size; j++) {
 				if (a[j - 1] > a[j]) {
 					temp = a[j - 1];
 					a[j - 1] = a[j];
@@ -51,7 +51,7 @@ public class SortingAlgorithms {
 	}
 
 	public static void main(String[] args) {
-		int[] ar = { 10, 20, 90, 30, 40 };
+		int[] ar = {70, 100,60, 20,10, 90, 80, 30, 40,50 };
 		int[] bs = bubbleSort(ar);
 		System.out.println("Bubbale Sort");
 		for (int i : bs) {
